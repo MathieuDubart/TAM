@@ -7,13 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB54656D2BA2E6A500A23BDA /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54656C2BA2E6A500A23BDA /* KeyboardViewController.swift */; };
+		DB5465712BA2E6A500A23BDA /* SmartKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB54656A2BA2E6A500A23BDA /* SmartKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBC94D302BA2E14400FD6F66 /* TAM_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC94D2F2BA2E14400FD6F66 /* TAM_ProjectApp.swift */; };
 		DBC94D322BA2E14400FD6F66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC94D312BA2E14400FD6F66 /* ContentView.swift */; };
 		DBC94D342BA2E14600FD6F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC94D332BA2E14600FD6F66 /* Assets.xcassets */; };
 		DBC94D372BA2E14600FD6F66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC94D362BA2E14600FD6F66 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DB54656F2BA2E6A500A23BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBC94D242BA2E14400FD6F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB5465692BA2E6A500A23BDA;
+			remoteInfo = SmartKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB5465722BA2E6A500A23BDA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB5465712BA2E6A500A23BDA /* SmartKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DB54656A2BA2E6A500A23BDA /* SmartKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SmartKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB54656C2BA2E6A500A23BDA /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		DB54656E2BA2E6A500A23BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC94D2C2BA2E14400FD6F66 /* TAM Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAM Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC94D2F2BA2E14400FD6F66 /* TAM_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAM_ProjectApp.swift; sourceTree = "<group>"; };
 		DBC94D312BA2E14400FD6F66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB5465672BA2E6A500A23BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBC94D292BA2E14400FD6F66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,10 +68,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB54656B2BA2E6A500A23BDA /* SmartKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DB54656C2BA2E6A500A23BDA /* KeyboardViewController.swift */,
+				DB54656E2BA2E6A500A23BDA /* Info.plist */,
+			);
+			path = SmartKeyboard;
+			sourceTree = "<group>";
+		};
 		DBC94D232BA2E14400FD6F66 = {
 			isa = PBXGroup;
 			children = (
 				DBC94D2E2BA2E14400FD6F66 /* TAM Project */,
+				DB54656B2BA2E6A500A23BDA /* SmartKeyboard */,
 				DBC94D2D2BA2E14400FD6F66 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC94D2C2BA2E14400FD6F66 /* TAM Project.app */,
+				DB54656A2BA2E6A500A23BDA /* SmartKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +117,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB5465692BA2E6A500A23BDA /* SmartKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5465752BA2E6A500A23BDA /* Build configuration list for PBXNativeTarget "SmartKeyboard" */;
+			buildPhases = (
+				DB5465662BA2E6A500A23BDA /* Sources */,
+				DB5465672BA2E6A500A23BDA /* Frameworks */,
+				DB5465682BA2E6A500A23BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartKeyboard;
+			productName = SmartKeyboard;
+			productReference = DB54656A2BA2E6A500A23BDA /* SmartKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DBC94D2B2BA2E14400FD6F66 /* TAM Project */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBC94D3A2BA2E14600FD6F66 /* Build configuration list for PBXNativeTarget "TAM Project" */;
@@ -77,10 +141,12 @@
 				DBC94D282BA2E14400FD6F66 /* Sources */,
 				DBC94D292BA2E14400FD6F66 /* Frameworks */,
 				DBC94D2A2BA2E14400FD6F66 /* Resources */,
+				DB5465722BA2E6A500A23BDA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DB5465702BA2E6A500A23BDA /* PBXTargetDependency */,
 			);
 			name = "TAM Project";
 			productName = "TAM Project";
@@ -97,6 +163,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					DB5465692BA2E6A500A23BDA = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					DBC94D2B2BA2E14400FD6F66 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -116,11 +185,19 @@
 			projectRoot = "";
 			targets = (
 				DBC94D2B2BA2E14400FD6F66 /* TAM Project */,
+				DB5465692BA2E6A500A23BDA /* SmartKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DB5465682BA2E6A500A23BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBC94D2A2BA2E14400FD6F66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +210,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB5465662BA2E6A500A23BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB54656D2BA2E6A500A23BDA /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBC94D282BA2E14400FD6F66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +229,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DB5465702BA2E6A500A23BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB5465692BA2E6A500A23BDA /* SmartKeyboard */;
+			targetProxy = DB54656F2BA2E6A500A23BDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		DB5465732BA2E6A500A23BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.TAM-Project.SmartKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB5465742BA2E6A500A23BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.TAM-Project.SmartKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DBC94D382BA2E14600FD6F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,6 +410,7 @@
 		DBC94D3B2BA2E14600FD6F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +440,7 @@
 		DBC94D3C2BA2E14600FD6F66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -325,6 +470,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB5465752BA2E6A500A23BDA /* Build configuration list for PBXNativeTarget "SmartKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5465732BA2E6A500A23BDA /* Debug */,
+				DB5465742BA2E6A500A23BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DBC94D272BA2E14400FD6F66 /* Build configuration list for PBXProject "TAM Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
