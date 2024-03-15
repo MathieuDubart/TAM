@@ -13,6 +13,12 @@
 		DBC94D322BA2E14400FD6F66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC94D312BA2E14400FD6F66 /* ContentView.swift */; };
 		DBC94D342BA2E14600FD6F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC94D332BA2E14600FD6F66 /* Assets.xcassets */; };
 		DBC94D372BA2E14600FD6F66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC94D362BA2E14600FD6F66 /* Preview Assets.xcassets */; };
+		ED5AD41B2BA45CBC00C53DCE /* KeyboardKitPro in Frameworks */ = {isa = PBXBuildFile; productRef = ED5AD41A2BA45CBC00C53DCE /* KeyboardKitPro */; };
+		ED5AD4212BA47CB200C53DCE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5AD4202BA47CB200C53DCE /* Logger.swift */; };
+		ED5AD4222BA47CB200C53DCE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5AD4202BA47CB200C53DCE /* Logger.swift */; };
+		ED5AD4242BA47FC800C53DCE /* KeyboardKitPro in Frameworks */ = {isa = PBXBuildFile; productRef = ED5AD4232BA47FC800C53DCE /* KeyboardKitPro */; };
+		ED5AD4262BA488DE00C53DCE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5AD4252BA488DE00C53DCE /* Errors.swift */; };
+		ED5AD4272BA488DE00C53DCE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5AD4252BA488DE00C53DCE /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,8 @@
 		DBC94D312BA2E14400FD6F66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBC94D332BA2E14600FD6F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC94D362BA2E14600FD6F66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED5AD4202BA47CB200C53DCE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		ED5AD4252BA488DE00C53DCE /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5AD41B2BA45CBC00C53DCE /* KeyboardKitPro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5AD4242BA47FC800C53DCE /* KeyboardKitPro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 				DBC94D2E2BA2E14400FD6F66 /* TAM Project */,
 				DB54656B2BA2E6A500A23BDA /* SmartKeyboard */,
 				DBC94D2D2BA2E14400FD6F66 /* Products */,
+				ED5AD41C2BA4617100C53DCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +109,7 @@
 		DBC94D2E2BA2E14400FD6F66 /* TAM Project */ = {
 			isa = PBXGroup;
 			children = (
+				ED5AD41F2BA47BCF00C53DCE /* Utils */,
 				DBC94D2F2BA2E14400FD6F66 /* TAM_ProjectApp.swift */,
 				DBC94D312BA2E14400FD6F66 /* ContentView.swift */,
 				DBC94D332BA2E14600FD6F66 /* Assets.xcassets */,
@@ -112,6 +124,22 @@
 				DBC94D362BA2E14600FD6F66 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED5AD41C2BA4617100C53DCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED5AD41F2BA47BCF00C53DCE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED5AD4202BA47CB200C53DCE /* Logger.swift */,
+				ED5AD4252BA488DE00C53DCE /* Errors.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +158,9 @@
 			dependencies = (
 			);
 			name = SmartKeyboard;
+			packageProductDependencies = (
+				ED5AD41A2BA45CBC00C53DCE /* KeyboardKitPro */,
+			);
 			productName = SmartKeyboard;
 			productReference = DB54656A2BA2E6A500A23BDA /* SmartKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -149,6 +180,9 @@
 				DB5465702BA2E6A500A23BDA /* PBXTargetDependency */,
 			);
 			name = "TAM Project";
+			packageProductDependencies = (
+				ED5AD4232BA47FC800C53DCE /* KeyboardKitPro */,
+			);
 			productName = "TAM Project";
 			productReference = DBC94D2C2BA2E14400FD6F66 /* TAM Project.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +214,9 @@
 				Base,
 			);
 			mainGroup = DBC94D232BA2E14400FD6F66;
+			packageReferences = (
+				ED5AD4192BA45CBC00C53DCE /* XCRemoteSwiftPackageReference "KeyboardKitPro" */,
+			);
 			productRefGroup = DBC94D2D2BA2E14400FD6F66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,6 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB54656D2BA2E6A500A23BDA /* KeyboardViewController.swift in Sources */,
+				ED5AD4272BA488DE00C53DCE /* Errors.swift in Sources */,
+				ED5AD4222BA47CB200C53DCE /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5AD4262BA488DE00C53DCE /* Errors.swift in Sources */,
 				DBC94D322BA2E14400FD6F66 /* ContentView.swift in Sources */,
+				ED5AD4212BA47CB200C53DCE /* Logger.swift in Sources */,
 				DBC94D302BA2E14400FD6F66 /* TAM_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +460,8 @@
 				DEVELOPMENT_TEAM = LK2358MPL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tam;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +492,8 @@
 				DEVELOPMENT_TEAM = LK2358MPL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tam;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +543,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED5AD4192BA45CBC00C53DCE /* XCRemoteSwiftPackageReference "KeyboardKitPro" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKitPro.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED5AD41A2BA45CBC00C53DCE /* KeyboardKitPro */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED5AD4192BA45CBC00C53DCE /* XCRemoteSwiftPackageReference "KeyboardKitPro" */;
+			productName = KeyboardKitPro;
+		};
+		ED5AD4232BA47FC800C53DCE /* KeyboardKitPro */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED5AD4192BA45CBC00C53DCE /* XCRemoteSwiftPackageReference "KeyboardKitPro" */;
+			productName = KeyboardKitPro;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBC94D242BA2E14400FD6F66 /* Project object */;
 }

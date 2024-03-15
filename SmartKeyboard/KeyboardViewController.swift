@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import KeyboardKitPro
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: KeyboardInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
+    var lastSentence: String = ""
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -19,6 +21,16 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let licenseKey = try? self.getLicenseKeyFor("KEYBOARDKIT_KEY")
+        
+        _ = try? setupPro(
+                withLicenseKey: licenseKey ?? "",
+                locales: [.french] // Define which locales to use
+            ) { _ in
+                // Make any license-based configurations here
+                
+            }
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
@@ -42,6 +54,13 @@ class KeyboardViewController: UIInputViewController {
     
     override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
+        
+        if let message = self.getInputFieldText() {
+            KeyboardLogger.log("textWillChange - \(message)")
+        } else {
+            KeyboardLogger.log("empty optional (nil)")
+        }
+        
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
@@ -56,5 +75,17 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
+    func getInputFieldText() -> String? {
+        return self.textDocumentProxy.documentContextBeforeInput
+    }
 
+    func getLicenseKeyFor(_ key: String) throws -> String {
+        guard let licenseKey = ProcessInfo.processInfo.environment[key] else {
+            throw KeyErrors.notAvailable
+        }
+        
+        Logger.log("LicenseKey loaded")
+        return licenseKey
+    }
 }
