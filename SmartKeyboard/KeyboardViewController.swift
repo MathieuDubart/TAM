@@ -24,13 +24,13 @@ class KeyboardViewController: KeyboardInputViewController {
         
         let licenseKey = try? self.getLicenseKeyFor("KEYBOARDKIT_KEY")
         
-        _ = try? setupPro(
-                withLicenseKey: licenseKey ?? "",
-                locales: [.french] // Define which locales to use
-            ) { _ in
-                // Make any license-based configurations here
-                
-            }
+        setupPro(
+            withLicenseKey: licenseKey ?? "",
+            locales: [.french] // Define which locales to use
+        ) { _ in
+            // Make any license-based configurations here
+            
+        }
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
@@ -56,7 +56,7 @@ class KeyboardViewController: KeyboardInputViewController {
         // The app is about to change the document's contents. Perform any preparation here.
         
         if let message = self.getInputFieldText() {
-            KeyboardLogger.log("textWillChange - \(message)")
+            KeyboardLogger.log("in KeyboardViewController:59 - \(message)")
         } else {
             KeyboardLogger.log("empty optional (nil)")
         }
@@ -85,7 +85,7 @@ class KeyboardViewController: KeyboardInputViewController {
             throw KeyErrors.notAvailable
         }
         
-        Logger.log("LicenseKey loaded")
+        Logger.log("LicenseKey loaded with value : \(licenseKey)")
         return licenseKey
     }
 }
