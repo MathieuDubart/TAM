@@ -19,6 +19,29 @@ class KeyboardViewController: KeyboardInputViewController {
         // Add custom view sizing constraints here
     }
     
+    override func viewWillSetupKeyboard() {
+        let licenseKey = try? self.getLicenseKeyFor("KEYBOARDKIT_KEY")
+        
+        super.viewWillSetupKeyboard()
+            setupPro(
+                withLicenseKey: licenseKey ?? "",
+                locales: [.french], // Define which locales to use
+                licenseConfiguration: { license in
+                    // Make any configurations and service adjustments here
+                },
+                view: { controller in
+                    SystemKeyboard(
+                        state: controller.state,
+                        services: controller.services,
+                        buttonContent: { $0.view },
+                        buttonView: { $0.view },
+                        emojiKeyboard: { $0.view },
+                        toolbar: { _ in }
+                    )
+                }
+            )
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +54,7 @@ class KeyboardViewController: KeyboardInputViewController {
             // Make any license-based configurations here
             
         }
+        
         
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
@@ -58,7 +82,7 @@ class KeyboardViewController: KeyboardInputViewController {
         if let message = self.getInputFieldText() {
             KeyboardLogger.log("in KeyboardViewController:59 - \(message)")
         } else {
-            KeyboardLogger.log("empty optional (nil)")
+            KeyboardLogger.log("in KeyboardViewController:61 - empty optional (nil)")
         }
         
     }
@@ -85,7 +109,7 @@ class KeyboardViewController: KeyboardInputViewController {
             throw KeyErrors.notAvailable
         }
         
-        Logger.log("LicenseKey loaded with value : \(licenseKey)")
+        Logger.log("KeyboardViewController:88 - LicenseKey loaded with value : \(licenseKey)")
         return licenseKey
     }
 }

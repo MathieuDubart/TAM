@@ -14,7 +14,7 @@ protocol LogProtocol {
 class Logger: LogProtocol {
     public static func log(_ message: String) -> Void {
         #if DEBUG
-            print("# Debug : Common - \(message)")
+            print("## Logger : Common - \(message)")
         #endif
     }
 }
@@ -22,7 +22,7 @@ class Logger: LogProtocol {
 class KeyboardLogger: LogProtocol {
     public static func log(_ message: String) -> Void {
         #if DEBUG
-            print("## Debug : Keyboard - \(message)")
+            print("## Logger : Keyboard - \(message)")
         #endif
     }
 }
@@ -30,7 +30,7 @@ class KeyboardLogger: LogProtocol {
 class ErrorLogger: LogProtocol {
     public static func log(_ message: String) -> Void {
         #if DEBUG
-            print("## Debug : Error - \(message)")
+            print("## Logger : Error - \(message)")
         #endif
     }
 }
