@@ -6,9 +6,8 @@ Daniel from KeyboardKit who kindly sent us a KeyboardKit Pro license to complete
 
 
 ## About the project
-This is a school project realized as part of our Bachelor "Web and mobile developer" at Gobelins, France.  
 Our goal is to allow people to improve their writing by making fewer spelling, conjugation and grammar mistakes.  
-To make that, the app comes with a custom keyboard extension that checks that the sentence has been written correctly.
+To achieve that, the app comes with a custom keyboard extension that checks the sentence has been written correctly.
 
 ## Our tools
 We planned to use those following tools for the project (it might change or evolve):
