@@ -22,4 +22,4 @@ We planned to use those following tools for the project (it might change or evol
 ## Stay updated
 If you want to stay updated with the entire project, you can follow us on our socials (all updates are made in french):
 - [Instagram](https://instagram.com/axel_sgrd) for stories updates
-- [Threads](https://threads.com/mathieudbrt) for threads updates
+- [Threads](https://threads.net/mathieudbrt) for threads updates
